@@ -1,14 +1,18 @@
-#include <ArduBots.h>
-char ABC;
+int leftMotor = 9;
+int tightMotor = 10;
+
+
 void setup() {
+  pinMode(leftMotor, OUTPUT);
+  pinMode(rightMotor, OUTPUT);
   Serial.begin(9600);
 }
 
  
 
 void loop() {
-  ABC = Serial.read();
-  if (ABC == 'W')
+  
+   if (ABC == 'W')
   {
     motors.setSpeeds(200,200);
     delay(500);
@@ -36,4 +40,5 @@ void loop() {
     motors.setSpeeds(0,0);
     ABC = 'O';
   }
+} 
 }
